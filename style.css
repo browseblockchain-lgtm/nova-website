@@ -11,8 +11,7 @@
   --font: "DM Sans", system-ui, sans-serif;
   --max-width: 1100px;
   --header-height: 72px;
-  --scroller-height: 40px;
-  --top-offset: calc(var(--scroller-height) + var(--header-height));
+  --top-offset: var(--header-height);
 }
 
 *,
@@ -47,82 +46,6 @@ code {
   background: var(--bg-elevated);
   border-radius: 6px;
   border: 1px solid var(--border);
-}
-
-/* Name scroller */
-.name-scroller {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 200;
-  height: var(--scroller-height);
-  background: linear-gradient(90deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%);
-  border-bottom: 1px solid rgba(99, 102, 241, 0.35);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-.name-scroller::before,
-.name-scroller::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 48px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.name-scroller::before {
-  left: 0;
-  background: linear-gradient(to right, #1e1b4b, transparent);
-}
-
-.name-scroller::after {
-  right: 0;
-  background: linear-gradient(to left, #1e1b4b, transparent);
-}
-
-.name-scroller-track {
-  display: flex;
-  width: max-content;
-  animation: scroll-name 18s linear infinite;
-}
-
-.name-scroller-content {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  gap: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.name-scroller-content span {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  color: #e0e7ff;
-  text-shadow: 0 0 12px rgba(129, 140, 248, 0.6);
-}
-
-.scroller-dot {
-  color: var(--accent-hover);
-  letter-spacing: 0;
-  font-size: 0.65rem;
-  opacity: 0.8;
-}
-
-@keyframes scroll-name {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }
 
 /* Crew Dragon docking scene */
@@ -254,7 +177,7 @@ code {
 /* Header */
 .header {
   position: fixed;
-  top: var(--scroller-height);
+  top: 0;
   left: 0;
   right: 0;
   z-index: 100;
@@ -804,10 +727,6 @@ section {
   }
 
   .orb {
-    animation: none;
-  }
-
-  .name-scroller-track {
     animation: none;
   }
 
