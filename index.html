@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova — Build something beautiful</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="name-scroller" aria-hidden="true">
+    <div class="name-scroller-track">
+      <div class="name-scroller-content">
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+      </div>
+      <div class="name-scroller-content">
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+        <span>Venkata</span><span class="scroller-dot">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <a href="#home" class="logo">Nova</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="rocket-scene" aria-hidden="true">
+    <div class="iss-dock">
+      <svg class="iss-dock-svg" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="moduleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#e5e7eb"/>
+            <stop offset="100%" stop-color="#9ca3af"/>
+          </linearGradient>
+        </defs>
+        <!-- ISS module body -->
+        <rect x="35" y="52" width="90" height="36" rx="5" fill="url(#moduleGrad)"/>
+        <rect x="35" y="52" width="90" height="8" rx="3" fill="#f3f4f6" opacity="0.6"/>
+        <!-- Solar wing hints -->
+        <rect x="0" y="58" width="32" height="8" rx="1" fill="#1e3a5f" opacity="0.85"/>
+        <rect x="128" y="58" width="32" height="8" rx="1" fill="#1e3a5f" opacity="0.85"/>
+        <!-- IDA docking ring -->
+        <circle cx="80" cy="48" r="30" fill="#4b5563" stroke="#d1d5db" stroke-width="3"/>
+        <circle cx="80" cy="48" r="22" fill="#374151" stroke="#9ca3af" stroke-width="2"/>
+        <circle cx="80" cy="48" r="14" fill="#1f2937"/>
+        <!-- Docking target cross (NASA TV style) -->
+        <line x1="56" y1="48" x2="104" y2="48" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="80" y1="24" x2="80" y2="72" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="80" cy="48" r="4" fill="#fbbf24"/>
+        <!-- Soft dock glow -->
+        <circle cx="80" cy="48" r="34" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.4" class="dock-glow"/>
+      </svg>
+    </div>
+
+    <div class="rocket-wrapper">
+      <svg class="crew-dragon" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="capsuleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#e2e8f0"/>
+            <stop offset="35%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#cbd5e1"/>
+          </linearGradient>
+          <linearGradient id="panelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1e4976"/>
+            <stop offset="50%" stop-color="#16365a"/>
+            <stop offset="100%" stop-color="#0f2744"/>
+          </linearGradient>
+          <radialGradient id="windowGrad" cx="30%" cy="30%">
+            <stop offset="0%" stop-color="#7dd3fc"/>
+            <stop offset="100%" stop-color="#0f172a"/>
+          </radialGradient>
+        </defs>
+
+        <!-- RCS thruster puffs -->
+        <g class="rcs-puffs">
+          <ellipse class="rcs-puff rcs-left" cx="58" cy="248" rx="5" ry="3" fill="#bfdbfe" opacity="0"/>
+          <ellipse class="rcs-puff rcs-right" cx="142" cy="252" rx="5" ry="3" fill="#bfdbfe" opacity="0"/>
+        </g>
+
+        <!-- Left solar array (trunk) -->
+        <g class="solar-array solar-left">
+          <rect x="4" y="198" width="62" height="20" rx="1" fill="url(#panelGrad)" stroke="#334155" stroke-width="0.8"/>
+          <rect x="4" y="224" width="62" height="20" rx="1" fill="url(#panelGrad)" stroke="#334155" stroke-width="0.8"/>
+          <line x1="4" y1="208" x2="66" y2="208" stroke="#334155" stroke-width="0.4" opacity="0.6"/>
+          <line x1="4" y1="234" x2="66" y2="234" stroke="#334155" stroke-width="0.4" opacity="0.6"/>
+          <line x1="20" y1="198" x2="20" y2="244" stroke="#334155" stroke-width="0.4" opacity="0.4"/>
+          <line x1="40" y1="198" x2="40" y2="244" stroke="#334155" stroke-width="0.4" opacity="0.4"/>
+          <rect x="64" y="216" width="10" height="3" fill="#71717a"/>
+        </g>
+
+        <!-- Right solar array -->
+        <g class="solar-array solar-right">
+          <rect x="134" y="198" width="62" height="20" rx="1" fill="url(#panelGrad)" stroke="#334155" stroke-width="0.8"/>
+          <rect x="134" y="224" width="62" height="20" rx="1" fill="url(#panelGrad)" stroke="#334155" stroke-width="0.8"/>
+          <line x1="134" y1="208" x2="196" y2="208" stroke="#334155" stroke-width="0.4" opacity="0.6"/>
+          <line x1="134" y1="234" x2="196" y2="234" stroke="#334155" stroke-width="0.4" opacity="0.6"/>
+          <line x1="150" y1="198" x2="150" y2="244" stroke="#334155" stroke-width="0.4" opacity="0.4"/>
+          <line x1="170" y1="198" x2="170" y2="244" stroke="#334155" stroke-width="0.4" opacity="0.4"/>
+          <rect x="126" y="216" width="10" height="3" fill="#71717a"/>
+        </g>
+
+        <!-- Trunk -->
+        <rect x="78" y="188" width="44" height="72" rx="2" fill="#111827"/>
+        <rect x="78" y="188" width="6" height="72" fill="#000" opacity="0.25"/>
+        <rect x="116" y="188" width="4" height="72" fill="#fff" opacity="0.04"/>
+        <line x1="82" y1="200" x2="118" y2="200" stroke="#374151" stroke-width="0.5"/>
+        <line x1="82" y1="230" x2="118" y2="230" stroke="#374151" stroke-width="0.5"/>
+
+        <!-- Heat shield / skirt -->
+        <path d="M72 188 L128 188 L122 206 L78 206 Z" fill="#374151"/>
+        <path d="M74 188 L126 188 L124 198 L76 198 Z" fill="#4b5563" opacity="0.5"/>
+
+        <!-- Capsule body -->
+        <path d="M74 70 Q100 52 126 70 L128 188 L72 188 Z" fill="url(#capsuleGrad)"/>
+        <path d="M74 70 Q100 52 126 70 L124 120 L76 120 Z" fill="#fff" opacity="0.15"/>
+
+        <!-- Side highlight -->
+        <path d="M118 75 L122 185 L114 185 L112 80 Z" fill="#fff" opacity="0.12"/>
+
+        <!-- Crew windows (4 portholes — iconic Dragon look) -->
+        <g class="windows">
+          <circle cx="92" cy="95" r="5.5" fill="url(#windowGrad)" stroke="#64748b" stroke-width="0.8"/>
+          <circle cx="92" cy="115" r="5.5" fill="url(#windowGrad)" stroke="#64748b" stroke-width="0.8"/>
+          <circle cx="92" cy="135" r="5.5" fill="url(#windowGrad)" stroke="#64748b" stroke-width="0.8"/>
+          <circle cx="92" cy="155" r="5.5" fill="url(#windowGrad)" stroke="#64748b" stroke-width="0.8"/>
+          <circle cx="90.5" cy="93.5" r="1.5" fill="#e0f2fe" opacity="0.7"/>
+        </g>
+
+        <!-- SpaceX logo area -->
+        <text x="108" y="130" font-size="6" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#374151" letter-spacing="0.5">SPACEX</text>
+
+        <!-- Nose section -->
+        <path d="M82 70 Q100 38 118 70 Q100 58 82 70" fill="#f8fafc"/>
+        <ellipse cx="100" cy="62" rx="14" ry="6" fill="#e2e8f0" opacity="0.5"/>
+
+        <!-- IDA docking port (nose ring) -->
+        <ellipse cx="100" cy="48" rx="20" ry="7" fill="#9ca3af"/>
+        <ellipse cx="100" cy="46" rx="15" ry="5" fill="#6b7280"/>
+        <ellipse cx="100" cy="44" rx="10" ry="3.5" fill="#374151"/>
+        <ellipse cx="100" cy="43" rx="6" ry="2" fill="#1f2937"/>
+        <!-- Docking port petals -->
+        <path d="M88 47 L92 44 L96 47" fill="none" stroke="#d1d5db" stroke-width="0.8"/>
+        <path d="M104 47 L108 44 L112 47" fill="none" stroke="#d1d5db" stroke-width="0.8"/>
+      </svg>
+    </div>
+  </div>
+
+  <main>
+    <section id="home" class="hero">
+      <p class="hero-label">Welcome to the future</p>
+      <h1>Design that feels <span class="gradient-text">effortless</span></h1>
+      <p class="hero-desc">
+        A minimal starting point for your next project. Clean layout, thoughtful typography, and room to grow.
+      </p>
+      <div class="hero-actions">
+        <a href="#features" class="btn btn-primary">Get started</a>
+        <a href="#about" class="btn btn-secondary">Learn more</a>
+        <button type="button" id="alert-btn" class="btn btn-secondary">Say hello</button>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Why Nova</h2>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">◇</div>
+          <h3>Fast</h3>
+          <p>Lightweight markup and CSS. No framework required to ship something polished.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">○</div>
+          <h3>Responsive</h3>
+          <p>Looks great on phones, tablets, and desktops with a mobile-first layout.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">△</div>
+          <h3>Accessible</h3>
+          <p>Semantic HTML, keyboard-friendly navigation, and clear focus states.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-content">
+        <h2>Built for clarity</h2>
+        <p>
+          This template gives you a solid foundation: a hero section, feature cards, and a contact form.
+          Customize colors in <code>style.css</code> and add behavior in <code>script.js</code>.
+        </p>
+      </div>
+      <div class="about-visual" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Stay in touch</h2>
+      <form class="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Say hello…" required></textarea>
+
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Nova. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
